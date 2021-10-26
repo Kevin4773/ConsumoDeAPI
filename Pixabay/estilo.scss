@@ -1,3 +1,6 @@
+$escura: #000;
+$neutra: #fff;
+
 * {
     margin: 0;
     padding: 0;
@@ -12,6 +15,9 @@
 }
 
 body {
+    width: 100%;
     font-family: 'Poppins', sans-serif;
-    @include display-flex(column, space-between, flex-start);
+    display: flex;
+    flex-direction: column;
 }
+
