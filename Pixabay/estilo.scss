@@ -15,9 +15,128 @@ $neutra: #fff;
 }
 
 body {
+    min-height: 100vh;
     width: 100%;
     font-family: 'Poppins', sans-serif;
     display: flex;
     flex-direction: column;
 }
 
+header {
+    height: 70px;
+    width: 100%;
+    @include display-flex(row, center, center);
+}
+
+.container {
+    height: inherit;
+    width: 1600px;
+    @include display-flex(row, space-between, center);
+}
+
+#left {
+    height: 70px;
+    width: 395px;
+    @include display-flex(row, space-between, center);
+
+    img {
+        height: 50;
+        width: 50px;
+        border-radius: 5px;
+    }
+
+    #pesquisa {
+        height: 70px;
+        @include display-flex(row, flex-end, center);
+        position: relative;
+
+        img {
+            height: 25px;
+            width: 25px;
+            position: absolute;
+            left: 12px;
+            cursor: pointer;
+        }
+
+        input {
+            height: 25px;
+            width: 225px;
+            border: none;
+            outline: none;
+            border-radius: 3px;
+            padding: 5px 50px;
+            font-size: 0.9rem;
+            background-color: #f7f7f7;
+        }
+    }
+
+}
+
+#right {
+    height: 70px;
+    width: 215px;
+    @include display-flex(row, space-between, center);
+
+    img {
+        height: 50px;
+        width: 50px;
+        border-radius: 50%;
+    }
+
+    button {
+        height: 35px;
+        width: 135px;
+        background-color: #02be6e;
+        border: none;
+        border-radius: 10px;
+        transition: .5s;
+        text-transform: uppercase;
+        font-weight: 300;
+        color: #fff;
+        cursor: pointer;
+
+        &:hover {
+            transform: scale(1.1);
+            transition: .5s;
+        }
+    }
+}
+
+main {
+    display: flex;
+    flex-grow: 1;
+    flex-direction: column;
+    background-color: #f4f4f4;
+
+    .galeria-container {
+        display: flex;
+        gap: 30px;
+        flex-wrap: wrap;
+        padding: 0 15px;
+        margin-top: 35px;
+    
+        .galeria-itens {
+            height: 340px;
+            flex-grow: 1;
+            overflow: hidden;
+    
+            img {
+                height: 100%;
+                width: 100%;
+                object-fit: cover;
+                transition: all .5s linear;
+            }
+        }
+    }
+}
+
+footer {
+    height: 40px;
+    width: 100%;
+    background-color: black;
+    @include display-flex(row, center, center);
+
+    span {
+        color: white;
+    }
+}
